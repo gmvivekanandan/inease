@@ -31,11 +31,11 @@ export default function Home() {
           <h1 className="hidden sm:inline sm:col-span-3 m-4 font-bold text-3xl">
             All
           </h1>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Card url="/drawsta_random_tee.jpg" />
+          <Card url="/index.jpeg" />
+          <Card url="/index1.jpeg" />
+          <Card url="/images.jpeg" />
+          <Card url="/images2.jpeg" />
         </div>
         <div className="hidden sm:inline">3</div>
       </div>

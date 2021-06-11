@@ -1,11 +1,25 @@
 export default function Navigation() {
   return (
     <div className="p-4 flex flex-row bg-gray-50">
-      <div>
+      <div className="flex-grow sm:flex-initial">
         <h1 className="font-sans text-3xl font-bold">Inease</h1>
       </div>
+      <div className="rounded-3xl p-2.5 bg-gray-100 sm:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
       <div className="hidden m-auto sm:flex">
-        <div className="relative ml-60 flex-row flex justify-start">
+        <div className="relative ml-56 flex-row flex justify-start">
           <span className="absolute inset-y-0 left-0 flex pl-2">
             <button
               type="submit"
