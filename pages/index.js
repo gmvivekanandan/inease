@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <div className="grid grid-cols-6 bg-gray-50">
         <div className="hidden sm:inline">
-          <h2 className="font-bold text-3xl m-4">Categories</h2>
+          <h2 className="font-bold text-xl m-4">Categories</h2>
           <ul className="flex flex-col pl-4">
             <li>
               <a href="#" className="hover:text-blue-600">
@@ -27,8 +27,8 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className="col-span-6 grid grid-cols-1 sm:grid-cols-3 sm:col-span-4">
-          <h1 className="hidden sm:inline sm:col-span-3 m-4 font-bold text-3xl">
+        <div className="col-span-6 grid grid-cols-1 sm:grid-cols-4 sm:col-span-4">
+          <h1 className="hidden sm:inline sm:col-span-4 m-4 font-bold text-xl">
             All
           </h1>
           <Card url="/drawsta_random_tee.jpg" />
