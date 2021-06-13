@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 export default function Navigation() {
   return (
     <div className="p-4 flex flex-row bg-gray-50">
       <div className="flex-grow sm:flex-initial">
-        <h1 className="font-sans text-3xl font-bold">Inease</h1>
+        <h1 className="font-sans text-3xl font-bold">INEASE</h1>
       </div>
       <div className="rounded-3xl p-2.5 bg-gray-100 sm:hidden">
         <svg
@@ -47,12 +49,16 @@ export default function Navigation() {
         </div>
       </div>
       <div className="hidden md:flex flex-grow justify-end items-center ">
-        <a className="mr-5 font-semibold hover:text-blue-600" href="#">
-          Home
-        </a>
-        <a className="font-semibold hover:text-blue-600" href="#">
-          About Us
-        </a>
+        <Link href="/">
+          <a className="mr-5 font-semibold hover:text-blue-600" href="#">
+            Home
+          </a>
+        </Link>
+        <Link href="/aboutUs">
+          <a className="font-semibold hover:text-blue-600" href="#">
+            About Us
+          </a>
+        </Link>
       </div>
     </div>
   );
