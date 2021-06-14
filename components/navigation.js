@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Navigation() {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
 
   const toggleActive = () => {
     setActive(!active);
