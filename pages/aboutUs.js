@@ -4,7 +4,7 @@ export default function AboutUS() {
   return (
     <div className="grid grid-cols-2 h-screen bg-gray-50">
       <div className="flex col-span-2 sm:col-span-1">
-        <div className="flex flex-col px-2 justify-center flex-grow">
+        <div className="flex flex-col px-4 justify-center flex-grow">
           <h1 className="font-bold text-3xl mb-2">About Us</h1>
           <h2 className="font-semibold text-base">
             Lorem Ipsum is simply dummy text of the printing and typesetting
