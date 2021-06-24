@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Card from "../components/card";
-import Image from "next/image";
-import pattern from "../styles/Home.module.css";
 
 export default function Home() {
   return (

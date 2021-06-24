@@ -1,13 +1,6 @@
 import Link from "next/link";
-import { useState } from "react";
 
-export default function Navigation() {
-  const [active, setActive] = useState(false);
-
-  const toggleActive = () => {
-    setActive(!active);
-  };
-
+export default function Navigation({ click, active }) {
   return (
     <div className="p-4 flex flex-row bg-gray-50">
       <div className="flex-grow sm:flex-initial">
@@ -16,8 +9,8 @@ export default function Navigation() {
 
       <button
         className="rounded-3xl p-2.5 bg-gray-100 sm:hidden focus:outline-none"
-        onClick={() => toggleActive()}
-        onBlur={() => toggleActive()}
+        onClick={() => click()}
+        onBlur={() => click()}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
