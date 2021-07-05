@@ -21,15 +21,14 @@ export default function Carousel() {
         <Image src="/michael-dolejs-hAVPg-JLGfo-unsplash.jpg" layout="fill" />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/michael-dolejs-hAVPg-JLGfo-unsplash.jpg" layout="fill" />
+        <Image src="/legalhelp-bg-compressor.jpg" layout="fill" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src="/parallax_bridge1.jpg" layout="fill" />
       </SwiperSlide>
       <SwiperSlide>
         <Image src="/michael-dolejs-hAVPg-JLGfo-unsplash.jpg" layout="fill" />
       </SwiperSlide>
-      <SwiperSlide>
-        <Image src="/michael-dolejs-hAVPg-JLGfo-unsplash.jpg" layout="fill" />
-      </SwiperSlide>
-      ...
     </Swiper>
   );
 }
