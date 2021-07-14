@@ -1,9 +1,8 @@
 import Image from "next/image";
 
 export default function Card(props) {
-  const isActive = true;
   return (
-    <div className="flex-row flex sm:flex-col m-3 shadow-md bg-white border-2 border-gray-100 rounded-md hover:shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 select-none cursor-pointer">
+    <div className="flex-row flex sm:flex-col m-3 shadow-md bg-ivory-light border-ivory-light rounded-md hover:shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 select-none cursor-pointer">
       <Image
         src={props.url}
         alt="tee"

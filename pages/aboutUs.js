@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutUS() {
   return (
-    <div className="grid grid-cols-2 h-screen bg-gray-50">
+    <div className="grid grid-cols-2 h-screen bg-ivory-dark">
       <div className="flex col-span-2 sm:col-span-1">
         <div className="flex flex-col px-4 justify-center flex-grow">
           <h1 className="font-bold text-3xl mb-2">About Us</h1>

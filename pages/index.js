@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Carousel />
-      <div className="grid grid-cols-6 bg-gray-50 pattern">
+      <div className="grid grid-cols-6 bg-ivory-dark pattern">
         <div className="hidden sm:inline">
           <h2 className="font-bold text-xl m-4">Categories</h2>
           <ul className="flex flex-col pl-4">

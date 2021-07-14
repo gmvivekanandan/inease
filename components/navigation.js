@@ -2,13 +2,13 @@ import Link from "next/link";
 
 export default function Navigation({ click, active }) {
   return (
-    <div className="p-4 flex flex-row bg-gray-50">
+    <div className="p-4 flex flex-row bg-ivory-dark">
       <div className="flex-grow sm:flex-initial">
-        <h1 className="font-sans text-3xl font-bold">INEASE</h1>
+        <h1 className="text-3xl font-bold">INEASE</h1>
       </div>
 
       <button
-        className="rounded-3xl p-2.5 bg-gray-100 sm:hidden focus:outline-none"
+        className="rounded-3xl p-2.5 sm:hidden focus:outline-none"
         onClick={() => click()}
         onBlur={() => click()}
       >
@@ -27,12 +27,12 @@ export default function Navigation({ click, active }) {
       </button>
 
       <div
-        className={`bg-blue-800 text-blue-100 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform ${
+        className={`bg-sand-dollar text-black w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform ${
           active ? "translate-x-0" : "-translate-x-full"
         } z-10 sm:hidden transition duration-200 ease-in-out`}
       >
         <a href="#" className="text-white flex items-center space-x-2 px-4">
-          <span className="text-2xl font-extrabold">INEASE</span>
+          <span className="text-2xl font-extrabold text-black">INEASE</span>
         </a>
 
         <nav>
@@ -76,7 +76,7 @@ export default function Navigation({ click, active }) {
             </button>
           </span>
           <input
-            className=" bg-gray-100 h-8 px-10 pr-10 rounded-lg text-sm focus:outline-none w-80"
+            className=" bg-ivory-light h-8 px-10 pr-10 rounded-lg text-sm focus:outline-none w-80 placeholder-black"
             type="search"
             name="search"
             placeholder="Search"

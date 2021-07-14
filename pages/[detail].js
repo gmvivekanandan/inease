@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Detail() {
   return (
-    <div className="h-auto sm:h-screen flex justify-center items-center">
-      <div className="flex flex-col rounded-md sm:flex-row">
+    <div className="h-auto sm:h-screen flex justify-center items-center bg-ivory-dark">
+      <div className="flex flex-col rounded-md sm:flex-row bg-ivory-light">
         <Image
           src="/images.jpeg"
           alt="tee"
@@ -63,7 +63,7 @@ export default function Detail() {
           </p>
           <div className="p-5 flex justify-center">
             <button
-              className="bg-blue-600 p-2 w-full rounded-full text-white"
+              className="bg-dusty p-2 w-full rounded-full text-black"
               type="button"
             >
               Buy Product
