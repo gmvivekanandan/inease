@@ -1,8 +1,12 @@
 import Head from "next/head";
 import Card from "../components/card";
 import Carousel from "../components/carousel";
+import firebase from "../config/firebase";
+import { useRouter } from "next/router";
 
-export default function Home() {
+export default function Home(props) {
+  const router = useRouter();
+  console.log(props);
   return (
     <div>
       <Head>
@@ -31,11 +35,14 @@ export default function Home() {
           <h1 className="hidden sm:inline sm:col-span-4 m-4 font-bold text-xl">
             All
           </h1>
-          <Card url="/drawsta_random_tee.jpg" />
-          <Card url="/index.jpeg" />
-          <Card url="/index1.jpeg" />
-          <Card url="/images.jpeg" />
-          <Card url="/images2.jpeg" />
+          {Object.keys(props).map((item) => (
+            <Card
+              url={props[item].imageurl}
+              name={props[item].name}
+              price={props[item].price}
+              id={props[item].id}
+            />
+          ))}
         </div>
         <div className="hidden sm:inline">
           <h2 className="font-bold text-xl mt-4 ml-6">Relevance</h2>
@@ -43,4 +50,15 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const list = [];
+  const res = await firebase.firestore().collection("all").get();
+  res.docs.forEach((doc) => {
+    const newData = { ...doc.data(), id: doc.id };
+    list.push(newData);
+  });
+  const obj = { ...list };
+  return { props: obj };
 }
