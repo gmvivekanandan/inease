@@ -81,7 +81,7 @@ export default function Categories(props) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   var list = [];
   const res = await firebase.firestore().collection("category").get();
   res.docs.forEach((doc) => {
