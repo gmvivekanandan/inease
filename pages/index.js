@@ -2,11 +2,8 @@ import Head from "next/head";
 import Card from "../components/card";
 import Carousel from "../components/carousel";
 import firebase from "../config/firebase";
-import { useRouter } from "next/router";
 
 export default function Home(props) {
-  const router = useRouter();
-  console.log(props);
   return (
     <div>
       <Head>
@@ -52,7 +49,7 @@ export default function Home(props) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const list = [];
   const res = await firebase.firestore().collection("all").get();
   res.docs.forEach((doc) => {

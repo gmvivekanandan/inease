@@ -7,7 +7,8 @@ export default function Categories(props) {
       .firestore()
       .collection("category")
       .doc(event.target.category.value)
-      .set({ id: event.target.category.value });
+      .set({ id: event.target.category.value })
+      .then(alert("Saved successfully, refresh to view changes"));
   };
 
   const remove = async (event) => {
@@ -15,7 +16,8 @@ export default function Categories(props) {
       .firestore()
       .collection("category")
       .doc(event)
-      .delete();
+      .delete()
+      .then(alert("Removed successfully, refresh to view changes"));
   };
   return (
     <div className="flex flex-col p-4">
