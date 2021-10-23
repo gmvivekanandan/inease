@@ -29,6 +29,7 @@ export default function Products(props) {
       .set({
         name: event.target.productname.value,
         price: event.target.price.value,
+        desc: event.target.productdesc.value,
         imageurl: fileURL,
         filename: file.name,
       })
@@ -66,6 +67,18 @@ export default function Products(props) {
                 id="productname"
                 className="border border-gray-300 flex-1 block w-full rounded-r-md sm:text-sm pl-1"
                 placeholder="Name"
+              />
+            </div>
+            <div className="mt-1 flex rounded-md shadow-sm mr-2">
+              <span className="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                Add Name
+              </span>
+              <input
+                type="text"
+                name="productdesc"
+                id="productdesc"
+                className="border border-gray-300 flex-1 block w-full rounded-r-md sm:text-sm pl-1"
+                placeholder="Description"
               />
             </div>
             <div className="mt-1 flex rounded-md shadow-sm mr-2">

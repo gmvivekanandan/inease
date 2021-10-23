@@ -14,8 +14,8 @@ export default function Home(props) {
       <Carousel />
       <div className="grid grid-cols-6 bg-ivory-dark pattern">
         <div className="hidden sm:inline">
-          <h2 className="font-bold text-xl m-4">Categories</h2>
-          <ul className="flex flex-col pl-4">
+          <h2 className="font-bold text-xl m-4">Ad</h2>
+          {/* <ul className="flex flex-col pl-4">
             <li>
               <a href="#" className="hover:text-blue-600">
                 Category 1
@@ -26,7 +26,7 @@ export default function Home(props) {
                 Category 2
               </a>
             </li>
-          </ul>
+          </ul> */}
         </div>
         <div className="col-span-6 grid grid-cols-1 sm:grid-cols-4 sm:col-span-4">
           <h1 className="hidden sm:inline sm:col-span-4 m-4 font-bold text-xl">
@@ -42,7 +42,7 @@ export default function Home(props) {
           ))}
         </div>
         <div className="hidden sm:inline">
-          <h2 className="font-bold text-xl mt-4 ml-6">Relevance</h2>
+          <h2 className="font-bold text-xl mt-4 ml-6">Ad</h2>
         </div>
       </div>
       <footer className="flex flex-col items-center justify-between px-6 py-4 bg-ivory-light sm:flex-row inset-x-0">

@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 export default function Card(props) {
-  const router = useRouter();
   return (
     <Link
       href={{
@@ -21,7 +19,7 @@ export default function Card(props) {
         />
         <div className="flex flex-col">
           <h2 className="text-xl font-bold ml-2 mt-2 p-2">{props.name}</h2>
-          <h2 className="text-sm font-light ml-2 p-2">A simple tagline</h2>
+          <h2 className="text-sm font-light ml-2 p-2">{props.desc}</h2>
           <h1 className="text-2xl font-bold ml-2 p-2">$ {props.price}</h1>
         </div>
       </div>

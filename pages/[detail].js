@@ -5,7 +5,11 @@ import firebase from "../config/firebase";
 export default function Detail(post) {
   const router = useRouter();
   if (router.isFallback) {
-    return <div>Loading...</div>;
+    return (
+      <div class=" flex justify-center items-center">
+        <div class="animate-spin rounded-full h-20 w-20 border-t-2 border-b-2 border-purple-500"></div>
+      </div>
+    );
   }
   return (
     <div className="h-screen sm:h-screen flex justify-center items-center bg-ivory-dark">
@@ -19,6 +23,7 @@ export default function Detail(post) {
         />
         <div className="flex flex-col p-2 space-y-2">
           <h1 className="text-xl text-gray-800 font-bold">{post.name}</h1>
+          <p className="w-auto sm:w-96 overflow-auto">{post.desc}</p>
           <p className="w-auto sm:w-96 overflow-auto flex-grow">{post.price}</p>
           <div className="p-5 flex justify-center">
             <button
