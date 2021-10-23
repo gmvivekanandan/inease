@@ -8,14 +8,14 @@ export default function Detail(post) {
     return <div>Loading...</div>;
   }
   return (
-    <div className="h-auto sm:h-screen flex justify-center items-center bg-ivory-dark">
+    <div className="h-screen sm:h-screen flex justify-center items-center bg-ivory-dark">
       <div className="flex flex-col rounded-md sm:flex-row bg-ivory-light">
         <Image
           src={post.imageurl}
           alt="tee"
           width={275}
           height={400}
-          className="rounded-l-md"
+          className="rounded-b-md sm:rounded-l-md"
         />
         <div className="flex flex-col p-2 space-y-2">
           <h1 className="text-xl text-gray-800 font-bold">{post.name}</h1>
