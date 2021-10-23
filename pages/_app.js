@@ -17,7 +17,6 @@ function MyApp({ Component, pageProps }) {
     <div>
       <Navigation click={toggleActive} active={active} />
       <Component {...pageProps} />
-      <Footer />
     </div>
   );
 }

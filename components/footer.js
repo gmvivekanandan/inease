@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-between px-6 py-4 bg-ivory-light sm:flex-row">
+    <footer className="flex flex-col items-center justify-between px-6 py-4 bg-ivory-light sm:flex-row inset-x-0">
       <a href="#" className="text-xl font-bold  hover:text-gray-700">
         Inease
       </a>
