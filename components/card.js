@@ -11,15 +11,7 @@ export default function Card(props) {
         query: { detail: props.id },
       }}
     >
-      <div
-        className="flex-row flex sm:flex-col m-3 shadow-md bg-ivory-light border-ivory-light rounded-md hover:shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 select-none cursor-pointer"
-        /*onClick={() =>
-          router.push({
-            pathname: "[detail]",
-            query: { detail: props.id, id: props.id },
-          })
-        }*/
-      >
+      <div className="flex-row flex sm:flex-col m-3 shadow-md bg-ivory-light border-ivory-light rounded-md hover:shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 select-none cursor-pointer">
         <Image
           src={props.url}
           alt="tee"
