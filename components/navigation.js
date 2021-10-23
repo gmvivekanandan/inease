@@ -28,7 +28,7 @@ export default function Navigation({ click, active }) {
 
       <div
         className={`bg-sand-dollar text-black w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform ${
-          active ? "translate-x-0" : "-translate-x-full"
+          active ? "translate-x-0 h-screen" : "-translate-x-full"
         } z-10 sm:hidden transition duration-200 ease-in-out`}
       >
         <a href="#" className="text-white flex items-center space-x-2 px-4">
