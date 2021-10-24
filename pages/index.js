@@ -12,7 +12,7 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Carousel />
-      <div className="grid grid-cols-6 bg-ivory-dark pattern">
+      <div className="grid grid-cols-6 bg-primary-light pattern">
         <div className="hidden sm:inline">
           <h2 className="font-bold text-xl m-4">Ad</h2>
           {/* <ul className="flex flex-col pl-4">
@@ -45,7 +45,7 @@ export default function Home(props) {
           <h2 className="font-bold text-xl mt-4 ml-6">Ad</h2>
         </div>
       </div>
-      <footer className="flex flex-col items-center justify-between px-6 py-4 bg-ivory-light sm:flex-row inset-x-0">
+      <footer className="flex flex-col items-center justify-between px-6 py-4 bg-primary-light sm:flex-row inset-x-0">
         <a href="#" className="text-xl font-bold  hover:text-gray-700">
           Inease
         </a>

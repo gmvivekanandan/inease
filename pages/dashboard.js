@@ -10,7 +10,7 @@ export default function Dashboard() {
     if (firebaseUser) {
       changeUser(true);
     } else {
-      router.push("/login");
+      router.replace("/login");
     }
   });
 
@@ -24,7 +24,7 @@ export default function Dashboard() {
   };
   if (user) {
     return (
-      <div className="bg-gray-50 flex flex-col items-center justify-center p-2 gap-4">
+      <div className="bg-primary-light flex flex-col items-center justify-center p-2 gap-4 h-screen">
         <ul>
           <Link href="/categories">
             <li className="border-gray-400 flex flex-row mb-2">

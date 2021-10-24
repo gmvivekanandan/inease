@@ -1,8 +1,17 @@
 import firebase from "../config/firebase";
-import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Products(props) {
-  const user = firebase.auth().currentUser;
+  const [user, changeUser] = useState(false);
+  const router = useRouter();
+  firebase.auth().onAuthStateChanged((firebaseUser) => {
+    if (firebaseUser) {
+      changeUser(true);
+    } else {
+      router.replace("/login");
+    }
+  });
 
   const submit = async (event) => {
     event.preventDefault();
@@ -54,7 +63,7 @@ export default function Products(props) {
 
   if (user) {
     return (
-      <div className="flex flex-col p-2">
+      <div className="flex flex-col p-2 bg-primary-light h-screen">
         <form onSubmit={submit}>
           <div className="flex flex-col gap-2">
             <div className="mt-1 flex rounded-md shadow-sm mr-2">
@@ -173,16 +182,8 @@ export default function Products(props) {
     );
   } else {
     return (
-      <div className="flex flex-col items-center">
-        <h3 className="m-3">403 Permission Denied</h3>
-        <Link href="/login">
-          <button
-            className="bg-blue-500 p-2 rounded-full text-white"
-            type="button"
-          >
-            Goto login
-          </button>
-        </Link>
+      <div class=" flex justify-center items-center">
+        <div class="animate-spin rounded-full h-20 w-20 border-t-2 border-b-2 border-purple-500"></div>
       </div>
     );
   }

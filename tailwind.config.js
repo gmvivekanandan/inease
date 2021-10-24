@@ -7,12 +7,12 @@ module.exports = {
         noto: "'Noto Sans', sans-serif",
       },
       colors: {
-        ivory: {
-          dark: "#ede7dc",
-          light: "#e2ded0",
+        primary: {
+          light: "#F1F1F1",
+          dark: "#23120B",
         },
-        dusty: "#ccafa5",
-        "sand-dollar": "#dcd2cc",
+        tertiary: "#FDB827",
+        secondary: "#21209C",
       },
     },
   },

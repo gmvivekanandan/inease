@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navigation({ click, active }) {
   return (
-    <div className="p-4 flex flex-row bg-ivory-dark">
+    <div className="p-4 flex flex-row bg-primary-light">
       <div className="flex-grow sm:flex-initial">
         <h1 className="text-3xl font-bold">INEASE</h1>
       </div>
@@ -39,7 +39,7 @@ export default function Navigation({ click, active }) {
           <Link href="/">
             <a
               href="#"
-              className="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white"
+              className="block py-2.5 px-4 rounded transition duration-200 hover:bg-secondary hover:text-white"
             >
               Home
             </a>
@@ -47,7 +47,7 @@ export default function Navigation({ click, active }) {
           <Link href="/aboutUs">
             <a
               href=""
-              className="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white"
+              className="block py-2.5 px-4 rounded transition duration-200 hover:bg-secondary hover:text-white"
             >
               About Us
             </a>
@@ -85,12 +85,12 @@ export default function Navigation({ click, active }) {
       </div>
       <div className="hidden md:flex flex-grow justify-end items-center ">
         <Link href="/">
-          <a className="mr-5 font-semibold hover:text-blue-600" href="#">
+          <a className="mr-5 font-semibold hover:text-secondary" href="#">
             Home
           </a>
         </Link>
         <Link href="/aboutUs">
-          <a className="font-semibold hover:text-blue-600" href="#">
+          <a className="font-semibold hover:text-secondary" href="#">
             About Us
           </a>
         </Link>

@@ -1,8 +1,17 @@
 import firebase from "../config/firebase";
-import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Categories(props) {
-  const user = firebase.auth().currentUser;
+  const [user, changeUser] = useState(false);
+  const router = useRouter();
+  firebase.auth().onAuthStateChanged((firebaseUser) => {
+    if (firebaseUser) {
+      changeUser(true);
+    } else {
+      router.replace("/login");
+    }
+  });
 
   const submit = async (event) => {
     event.preventDefault();
@@ -24,11 +33,11 @@ export default function Categories(props) {
   };
   if (user) {
     return (
-      <div className="flex flex-col p-4">
+      <div className="flex flex-col p-4 bg-primary-light h-screen">
         <form onSubmit={submit}>
           <div className="flex">
             <div class="mt-1 flex rounded-md shadow-sm mr-2">
-              <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+              <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-primary-light text-gray-500 text-sm">
                 Add Category
               </span>
               <input
@@ -41,7 +50,7 @@ export default function Categories(props) {
             </div>
             <button
               type="submit"
-              className="inline-flex justify-center py-1.5 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="inline-flex justify-center py-1.5 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               Add
             </button>
@@ -95,16 +104,8 @@ export default function Categories(props) {
     );
   } else {
     return (
-      <div className="flex flex-col items-center">
-        <h3 className="m-3">403 Permission Denied</h3>
-        <Link href="/login">
-          <button
-            className="bg-blue-500 p-2 rounded-full text-white"
-            type="button"
-          >
-            Goto login
-          </button>
-        </Link>
+      <div class=" flex justify-center items-center">
+        <div class="animate-spin rounded-full h-20 w-20 border-t-2 border-b-2 border-purple-500"></div>
       </div>
     );
   }

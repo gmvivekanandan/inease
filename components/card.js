@@ -9,7 +9,7 @@ export default function Card(props) {
         query: { detail: props.id },
       }}
     >
-      <div className="flex-row flex sm:flex-col m-3 shadow-md bg-ivory-light border-ivory-light rounded-md hover:shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 select-none cursor-pointer">
+      <div className="flex-row flex sm:flex-col m-3 shadow-md bg-primary-light border-primary-light rounded-md hover:shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 select-none cursor-pointer">
         <Image
           src={props.url}
           alt="tee"
@@ -19,7 +19,6 @@ export default function Card(props) {
         />
         <div className="flex flex-col">
           <h2 className="text-xl font-bold ml-2 mt-2 p-2">{props.name}</h2>
-          <h2 className="text-sm font-light ml-2 p-2">{props.desc}</h2>
           <h1 className="text-2xl font-bold ml-2 p-2">$ {props.price}</h1>
         </div>
       </div>

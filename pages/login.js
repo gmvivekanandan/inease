@@ -10,12 +10,12 @@ export default function Login() {
         event.target.email.value,
         event.target.password.value
       )
-      .then(router.push("/dashboard"));
+      .then(router.replace("/dashboard"));
   };
 
   return (
     <form onSubmit={login}>
-      <div className="bg-ivory-dark h-screen flex items-center justify-center">
+      <div className="bg-primary-light h-screen flex items-center justify-center">
         <div className="bg-ivory-light p-4 rounded-lg flex space-y-4 flex-col">
           <h2 className="text-center text-2xl font-bold">Inease</h2>
           <h3 className="text-center text-gray-600 font-semibold">
@@ -35,7 +35,7 @@ export default function Login() {
           />
           <button
             type="submit"
-            className="p-2 m-3 bg-dusty rounded-full text-black"
+            className="p-2 m-3 bg-secondary rounded-full text-white"
           >
             Login
           </button>
