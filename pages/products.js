@@ -168,7 +168,7 @@ export default function Products(props) {
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <a
                     href="#"
-                    className="text-red-600 hover:text-red-900"
+                    className="text-red-600 hover:text-red-500"
                     onClick={() => remove(props[item].id)}
                   >
                     Delete
