@@ -19,7 +19,7 @@ export default function Login() {
   };
 
   return (
-    <form onSubmit={login} method="POST">
+    <form onSubmit={login}>
       <div className="bg-primary-light h-screen flex items-center justify-center">
         <div className="bg-ivory-light p-4 rounded-lg flex space-y-4 flex-col">
           <h2 className="text-center text-2xl font-bold">Inease</h2>
