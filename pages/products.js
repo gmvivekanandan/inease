@@ -9,7 +9,7 @@ export default function Products(props) {
     if (firebaseUser) {
       changeUser(true);
     } else {
-      router.replace("/login");
+      router.push("/login");
     }
   });
 
