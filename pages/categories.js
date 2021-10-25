@@ -8,8 +8,6 @@ export default function Categories(props) {
   firebase.auth().onAuthStateChanged((firebaseUser) => {
     if (firebaseUser) {
       changeUser(true);
-    } else {
-      router.push("/login");
     }
   });
 
