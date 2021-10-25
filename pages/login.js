@@ -10,12 +10,7 @@ export default function Login() {
         event.target.email.value,
         event.target.password.value
       )
-      .then(alert("Logged in"));
-    firebase.auth().onAuthStateChanged((firebaseUser) => {
-      if (firebaseUser) {
-        router.replace("/dashboard");
-      }
-    });
+      .then(router.replace("/dashboard"));
   };
 
   return (
