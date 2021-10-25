@@ -9,7 +9,9 @@ export default function Products(props) {
   firebase.auth().onAuthStateChanged((firebaseUser) => {
     if (firebaseUser) {
       changeUser(true);
-      changeUser(false);
+      changeLoading(false);
+    } else {
+      changeLoading(false);
     }
   });
 
