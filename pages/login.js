@@ -9,7 +9,8 @@ export default function Login() {
       .signInWithEmailAndPassword(
         event.target.email.value,
         event.target.password.value
-      );
+      )
+      .then(alert("Logged in"));
   };
 
   firebase.auth().onAuthStateChanged((firebaseUser) => {
