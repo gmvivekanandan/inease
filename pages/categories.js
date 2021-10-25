@@ -1,13 +1,18 @@
 import firebase from "../config/firebase";
+import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
 export default function Categories(props) {
   const [user, changeUser] = useState(false);
+  const [loading, changeLoading] = useState(true);
   const router = useRouter();
   firebase.auth().onAuthStateChanged((firebaseUser) => {
     if (firebaseUser) {
       changeUser(true);
+      changeLoading(false);
+    } else {
+      changeLoading(false);
     }
   });
 
@@ -29,6 +34,14 @@ export default function Categories(props) {
       .delete()
       .then(alert("Removed successfully, refresh to view changes"));
   };
+  if (loading) {
+    return (
+      <div class=" flex justify-center items-center">
+        <div class="animate-spin rounded-full h-20 w-20 border-t-2 border-b-2 border-purple-500"></div>
+      </div>
+    );
+  }
+
   if (user) {
     return (
       <div className="flex flex-col p-4 bg-primary-light h-screen">
@@ -102,8 +115,13 @@ export default function Categories(props) {
     );
   } else {
     return (
-      <div class=" flex justify-center items-center">
-        <div class="animate-spin rounded-full h-20 w-20 border-t-2 border-b-2 border-purple-500"></div>
+      <div class=" flex flex-col justify-center items-center">
+        <h1>403 Forbidden</h1>
+        <Link href="login">
+          <button className="rounded-lg bg-blue-500 p-2 text-white">
+            Login
+          </button>
+        </Link>
       </div>
     );
   }
