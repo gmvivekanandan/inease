@@ -4,12 +4,12 @@ import { useRouter } from "next/router";
 
 export default function Products(props) {
   const [user, changeUser] = useState(false);
+  const [loading, changeLoading] = useState(true);
   const router = useRouter();
   firebase.auth().onAuthStateChanged((firebaseUser) => {
     if (firebaseUser) {
       changeUser(true);
-    } else {
-      router.push("/login");
+      changeUser(false);
     }
   });
 
@@ -60,6 +60,13 @@ export default function Products(props) {
       .delete()
       .then(alert("Removed successfully, refresh to view changes"));
   };
+  if (loading) {
+    return (
+      <div class=" flex justify-center items-center">
+        <div class="animate-spin rounded-full h-20 w-20 border-t-2 border-b-2 border-purple-500"></div>
+      </div>
+    );
+  }
 
   if (user) {
     return (
@@ -183,7 +190,7 @@ export default function Products(props) {
   } else {
     return (
       <div class=" flex justify-center items-center">
-        <div class="animate-spin rounded-full h-20 w-20 border-t-2 border-b-2 border-purple-500"></div>
+        <button className="rounded-full bg-blue-500">Login</button>
       </div>
     );
   }
