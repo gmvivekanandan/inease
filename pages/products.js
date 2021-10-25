@@ -1,4 +1,5 @@
 import firebase from "../config/firebase";
+import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
@@ -191,8 +192,13 @@ export default function Products(props) {
     );
   } else {
     return (
-      <div class=" flex justify-center items-center">
-        <button className="rounded-full bg-blue-500">Login</button>
+      <div class=" flex flex-col justify-center items-center">
+        <h1>403 Forbidden</h1>
+        <Link href="login">
+          <button className="rounded-lg bg-blue-500 p-2 text-white">
+            Login
+          </button>
+        </Link>
       </div>
     );
   }
