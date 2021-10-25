@@ -11,13 +11,12 @@ export default function Login() {
         event.target.password.value
       )
       .then(alert("Logged in"));
+    firebase.auth().onAuthStateChanged((firebaseUser) => {
+      if (firebaseUser) {
+        router.replace("/dashboard");
+      }
+    });
   };
-
-  firebase.auth().onAuthStateChanged((firebaseUser) => {
-    if (firebaseUser) {
-      router.replace("/dashboard");
-    }
-  });
 
   return (
     <form onSubmit={login} method="POST">
