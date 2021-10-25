@@ -4,14 +4,19 @@ import firebase from "../config/firebase";
 export default function Login() {
   const router = useRouter();
   const login = async (event) => {
-    await firebase
+    firebase
       .auth()
       .signInWithEmailAndPassword(
         event.target.email.value,
         event.target.password.value
-      )
-      .then(router.replace("/dashboard"));
+      );
   };
+
+  firebase.auth().onAuthStateChanged((firebaseUser) => {
+    if (firebaseUser) {
+      router.replace("/dashboard");
+    }
+  });
 
   return (
     <form onSubmit={login}>
