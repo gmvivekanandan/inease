@@ -11,7 +11,12 @@ export default function Login() {
         event.target.password.value
       )
       .catch((error) => alert(error.message))
-      .then(router.replace("/dashboard"));
+      .then(router.push("/dashboard"));
+    firebase.auth().onAuthStateChanged((firebaseUser) => {
+      if (firebaseUser) {
+        router.replace("/dashboard");
+      }
+    });
   };
 
   return (
