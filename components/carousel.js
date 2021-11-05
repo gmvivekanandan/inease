@@ -26,9 +26,6 @@ export default function Carousel() {
       <SwiperSlide>
         <Image src="/parallax_bridge1.jpg" layout="fill" />
       </SwiperSlide>
-      <SwiperSlide>
-        <Image src="/michael-dolejs-hAVPg-JLGfo-unsplash.jpg" layout="fill" />
-      </SwiperSlide>
     </Swiper>
   );
 }

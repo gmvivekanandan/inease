@@ -6,7 +6,6 @@ export default function Navigation({ click, active }) {
       <div className="flex-grow sm:flex-initial">
         <h1 className="text-3xl font-bold">INEASE</h1>
       </div>
-
       <button
         className="rounded-3xl p-2.5 sm:hidden focus:outline-none"
         onClick={() => click()}
@@ -25,9 +24,8 @@ export default function Navigation({ click, active }) {
           />
         </svg>
       </button>
-
       <div
-        className={`bg-sand-dollar text-black w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform ${
+        className={`bg-gray-100 text-black w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform ${
           active ? "translate-x-0 h-screen" : "-translate-x-full"
         } z-10 sm:hidden transition duration-200 ease-in-out`}
       >
@@ -54,8 +52,7 @@ export default function Navigation({ click, active }) {
           </Link>
         </nav>
       </div>
-
-      <div className="hidden m-auto sm:flex">
+      {/* <div className="hidden m-auto sm:flex">
         <div className="relative ml-52 flex-row flex justify-start">
           <span className="absolute inset-y-0 left-0 flex pl-2">
             <button
@@ -76,13 +73,13 @@ export default function Navigation({ click, active }) {
             </button>
           </span>
           <input
-            className=" bg-ivory-light h-8 px-10 pr-10 rounded-lg text-sm focus:outline-none w-80 placeholder-black"
+            className=" bg-gray-100 h-8 px-10 pr-10 rounded-lg text-sm focus:outline-none w-80 placeholder-black"
             type="search"
             name="search"
             placeholder="Search"
           />
         </div>
-      </div>
+      </div> */}
       <div className="hidden md:flex flex-grow justify-end items-center ">
         <Link href="/">
           <a className="mr-5 font-semibold hover:text-secondary" href="#">

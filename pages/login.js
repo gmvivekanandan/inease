@@ -3,20 +3,16 @@ import firebase from "../config/firebase";
 
 export default function Login() {
   const router = useRouter();
-  const login = (event) => {
-    firebase
+
+  const login = async (event) => {
+    await firebase
       .auth()
       .signInWithEmailAndPassword(
         event.target.email.value,
         event.target.password.value
       )
-      .catch((error) => alert(error.message))
-      .then(router.push("/dashboard"));
-    firebase.auth().onAuthStateChanged((firebaseUser) => {
-      if (firebaseUser) {
-        router.replace("/dashboard");
-      }
-    });
+      .then(router.push("/dashboard"))
+      .catch((error) => alert(error.message));
   };
 
   return (
@@ -28,13 +24,13 @@ export default function Login() {
             Admin login
           </h3>
           <input
-            className=" bg-sand-dollar h-8 px-5 pr-10 rounded-lg text-sm focus:outline-none placeholder-black w-80"
+            className=" bg-gray-100 h-8 px-5 pr-10 rounded-lg text-sm focus:outline-none placeholder-black w-80"
             type="text"
             name="email"
             placeholder="email"
           />
           <input
-            className=" bg-sand-dollar h-8 px-5 pr-10 rounded-lg text-sm focus:outline-none placeholder-black w-80"
+            className=" bg-gray-100 h-8 px-5 pr-10 rounded-lg text-sm focus:outline-none placeholder-black w-80"
             type="password"
             name="password"
             placeholder="password"
