@@ -16,7 +16,7 @@
     "react-loading-overlay": "^1.0.1",
     "react-search-autocomplete": "^5.4.2",
     "sass": "^1.35.1",
-    "swiper": "^6.7.1"
+    "swiper": "^6.8.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
